@@ -1,0 +1,20 @@
+apply plugin: 'java'
+compileJava {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+}
+
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.12'
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.12'
+}
+
+
+// Gradle wrapper
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
